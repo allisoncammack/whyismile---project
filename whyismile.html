@@ -1,0 +1,62 @@
+<head>
+  <title>Why I Smile</title>
+</head>
+
+<body>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1661103924136067',
+        xfbml      : true,
+        version    : 'v2.4'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <div class="container">
+    <header>
+      <h1>Why I Smile</h1>
+
+      {{> loginButtons}}
+
+      {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Share What Makes You Smile" />
+        </form>
+      {{/if}}
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+
+  <a href="https://twitter.com/intent/tweet?button_hashtag=WhyISmile&text=I%20choose%20to%20smile%20because%20...%20and%20despite%20..." class="twitter-hashtag-button" data-size="large" data-related="allisoncammack" data-url="http://whyismile.meteor.com">Tweet #WhyISmile</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+  <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+  </div>
+  </div>
+
+<footer class="container">
+  <p>Made by Allison Cammack</p>
+</footer>
+</body>
+
+<template name="task">
+  <li>{{text}}</li>
+</template>

@@ -1,0 +1,26 @@
+
+============
+
+Why I Smile is a web app that I created using Meteor. At present, it allows users to log in using Facebook or Twitter. It has a form that lets users share - in the app - a reason why they smile. And then that content is listed/displayed in the app. It also has buttons that will let users tweet content with an embedded link to my app (http://whyismile.meteor.com) and also an embedded hashtag (#WhyISmile) along with their content. They can alter the tweet to customize it to their liking. It also has buttons letting users like the app and share it on Facebook.
+
+Since Meteor powers the app, you can visit it - albeit just the beginnings of it - at http://whyismile.meteor.com.
+
+
+Principles of Meteor
+====================
+
+Data on the Wire. Meteor doesn't send HTML over the network. The server sends data and lets the client render it.
+
+One Language. Meteor lets you write both the client and the server parts of your application in JavaScript.
+
+Database Everywhere. You can use the same methods to access your database from the client or the server.
+
+Latency Compensation. On the client, Meteor prefetches data and simulates models to make it look like server method calls return instantly.
+
+Full Stack Reactivity. In Meteor, realtime is the default. All layers, from database to template, update themselves automatically when necessary.
+
+Embrace the Ecosystem. Meteor is open source and integrates with existing open source tools and frameworks.
+
+Simplicity Equals Productivity. The best way to make something seem simple is to have it actually be simple. Meteor's main functionality has clean, classically beautiful APIs.
+
+Source - http://docs.meteor.com/#/basic/sevenprinciples
